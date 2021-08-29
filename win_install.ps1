@@ -94,6 +94,8 @@ $SCOOP_GLOBAL = Read-Host 'Enter SCOOP_GLOBAL eg: D:\GlobalScoopApps'
 $env:SCOOP_GLOBAL=$SCOOP_GLOBAL
 [Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
 
+scoop install git
+
 $buckets = @(
   "extras",
   "nerd-fonts",
@@ -105,7 +107,6 @@ $mainApps = @(
   "7zip",
   "aria2",
   "FantasqueSansMono-NF",
-  "git"
   "innounp",
   "openssh",
   "python38",
