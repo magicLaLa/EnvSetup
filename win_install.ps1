@@ -1,8 +1,8 @@
 # 获取当前用户身份，不是 管理员的话 以管理员启动 PowerShell
-if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-  Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs;
-  exit
-}
+# if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+#   Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs;
+#   exit
+# }
 
 function Check-Command($cmdName) {
   # -ErrorAction: 确定 cmdlet 如何响应命令中的非终止错误
@@ -67,8 +67,7 @@ Write-Host "----------- End -----------------" -ForegroundColor Green
 
 # --- 安装 PowerShell-7
 Write-Host "Install PowerShell-7..." -ForegroundColor Green
-$powerShellVersion = Read-Host 'Enter PowerShell Version eg: PowerShell-7.1.3-win-x64.msi'
-msiexec.exe /package $powerShellVersion /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
+msiexec.exe /package PowerShell-7.1.3-win-x64.ms /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
 Write-Host "----------- End -----------------" -ForegroundColor Green
 # ---
 
