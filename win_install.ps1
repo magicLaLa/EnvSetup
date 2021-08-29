@@ -93,7 +93,7 @@ $env:SCOOP_GLOBAL='D:\GlobalScoopApps'
 [Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
 
 $buckets = @(
-  "dorado",
+  "dorado https://github.com/chawyehsu/dorado",
   "extras",
   "nerd-fonts",
   "nirsoft"
