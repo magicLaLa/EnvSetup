@@ -104,7 +104,6 @@ $buckets = @(
 )
 
 $mainApps = @(
-  "7zip",
   "aria2",
   "FantasqueSansMono-NF",
   "innounp",
