@@ -97,7 +97,7 @@ $buckets = @(
   "extras",
   "nerd-fonts",
   "nirsoft"
-  "nirsoft-alternative",
+  "nirsoft-alternative https://github.com/MCOfficer/scoop-nirsoft.git",
   "versions"
 )
 
