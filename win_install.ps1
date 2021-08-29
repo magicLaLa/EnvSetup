@@ -89,7 +89,8 @@ else {
   iwr -useb get.scoop.sh | iex
 }
 
-$env:SCOOP_GLOBAL='D:\GlobalScoopApps'
+$SCOOP_GLOBAL = Read-Host 'Enter SCOOP_GLOBAL eg: D:\GlobalScoopApps'
+$env:SCOOP_GLOBAL=$SCOOP_GLOBAL
 [Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
 
 $buckets = @(
