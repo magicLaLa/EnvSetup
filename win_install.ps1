@@ -88,9 +88,8 @@ else {
   Write-Host "Installing Scoop for Windows..." -ForegroundColor Green
   Write-Host "------------------------------------" -ForegroundColor Green
   iwr -useb get.scoop.sh | iex
+  scoop install git
 }
-
-scoop install git
 
 $SCOOP_GLOBAL = Read-Host 'Enter SCOOP_GLOBAL eg: D:\GlobalScoopApps'
 $env:SCOOP_GLOBAL=$SCOOP_GLOBAL
