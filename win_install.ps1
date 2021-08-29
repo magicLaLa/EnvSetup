@@ -134,7 +134,7 @@ scoop bucket add nirsoft-alternative https://github.com/MCOfficer/scoop-nirsoft.
 scoop bucket add dorado https://github.com/chawyehsu/dorado
 
 foreach ($mainApp in $mainApps) {
-  scoop install $app
+  scoop install $mainApp
 }
 foreach ($globApp in $globApps) {
   scoop install $globApp -g
