@@ -78,7 +78,7 @@ Write-Host "------------------------------------" -ForegroundColor Green
 Write-Host "[WARN] Ma de in China: some software like Google Chrome require the true Internet first" -ForegroundColor Yellow
 
 if (Check-Command -cmdname 'scoop') {
-  Write-Host "Choco is already installed, skip installation."
+  Write-Host "Scoop is already installed, skip installation."
   scoop update
 }
 else {
@@ -93,11 +93,9 @@ $env:SCOOP_GLOBAL='D:\GlobalScoopApps'
 [Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
 
 $buckets = @(
-  "dorado https://github.com/chawyehsu/dorado",
   "extras",
   "nerd-fonts",
-  "nirsoft"
-  "nirsoft-alternative https://github.com/MCOfficer/scoop-nirsoft.git",
+  "nirsoft",
   "versions"
 )
 
@@ -135,6 +133,9 @@ $globApps = @(
 foreach ($bucket in $buckets) {
   scoop bucket add $bucket
 }
+
+scoop bucket add nirsoft-alternative https://github.com/MCOfficer/scoop-nirsoft.git
+scoop bucket add dorado https://github.com/chawyehsu/dorado
 
 foreach ($mainApp in $mainApps) {
   scoop install $app
