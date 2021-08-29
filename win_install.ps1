@@ -65,12 +65,6 @@ foreach ($uwp in $uwpRubbishApps) {
 Write-Host "----------- End -----------------" -ForegroundColor Green
 # ---
 
-# --- 安装 PowerShell-7.1.3-win-x64.ms
-Write-Host "Install PowerShell-7..." -ForegroundColor Green
-msiexec.exe /package PowerShell-7.1.3-win-x64.ms /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1
-Write-Host "----------- End -----------------" -ForegroundColor Green
-# ---
-
 # --- 通过 scoop 安装 app
 Write-Host ""
 Write-Host "Installing Applications..." -ForegroundColor Green
@@ -81,7 +75,7 @@ Set-ExecutionPolicy remotesigned -Scope CurrentUser
 
 if (Check-Command -cmdname 'scoop') {
   Write-Host "Scoop is already installed, skip installation."
-  scoop update
+  # scoop update
 }
 else {
   Write-Host ""
@@ -111,6 +105,7 @@ $mainApps = @(
   "snipaste-beta",
   "starship",
   "sudo",
+  "windows-terminal",
   "vscode"
 )
 $globApps = @(
