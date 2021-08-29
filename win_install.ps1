@@ -77,6 +77,8 @@ Write-Host "Installing Applications..." -ForegroundColor Green
 Write-Host "------------------------------------" -ForegroundColor Green
 Write-Host "[WARN] Ma de in China: some software like Google Chrome require the true Internet first" -ForegroundColor Yellow
 
+Set-ExecutionPolicy remotesigned -Scope CurrentUser
+
 if (Check-Command -cmdname 'scoop') {
   Write-Host "Scoop is already installed, skip installation."
   scoop update
@@ -85,7 +87,6 @@ else {
   Write-Host ""
   Write-Host "Installing Scoop for Windows..." -ForegroundColor Green
   Write-Host "------------------------------------" -ForegroundColor Green
-  Set-ExecutionPolicy Bypass -Scope Process -Force
   iwr -useb get.scoop.sh | iex
 }
 
