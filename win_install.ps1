@@ -93,7 +93,7 @@ $buckets = @(
   "extras",
   "nerd-fonts",
   "nirsoft",
-  "versions"
+  "versions",
 )
 
 $mainApps = @(
@@ -132,6 +132,7 @@ foreach ($bucket in $buckets) {
 
 scoop bucket add nirsoft-alternative https://github.com/MCOfficer/scoop-nirsoft.git
 scoop bucket add dorado https://github.com/chawyehsu/dorado
+scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
 
 foreach ($mainApp in $mainApps) {
   scoop install $mainApp
