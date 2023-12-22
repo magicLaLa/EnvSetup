@@ -99,14 +99,14 @@ $buckets = @(
 $mainApps = @(
   "aria2",
   "FantasqueSansMono-NF",
+  "firacode",
   "innounp",
   "openssh",
   "python38",
   "snipaste-beta",
   "starship",
   "sudo",
-  "windows-terminal",
-  "vscode"
+  "nodejs-lts"
 )
 $globApps = @(
   "cacert",
@@ -114,10 +114,11 @@ $globApps = @(
   "everything",
   "grep"
   "lessmsi",
-  "nvm",
+  "fnm",
   "touch",
   "wox",
   "yarn",
+  "pnpm",
   "potplayer",
   "screentogif",
   "quicksetdns",
