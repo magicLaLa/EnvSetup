@@ -147,8 +147,8 @@ Write-Host "----------- End -----------------" -ForegroundColor Green
 # --- 设置 git
 Write-Host "Setting up Git for Windows..." -ForegroundColor Green
 Write-Host "------------------------------------" -ForegroundColor Green
-git config --global user.email "tomato.stao@gmail.com"
-git config --global user.name "lalalalala"
+# git config --global user.email "tomato.stao@gmail.com"
+# git config --global user.name "lalalalala"
 git config --global core.autocrlf false
 git config --global core.quotepath false
 git config --global i18n.commitencoding utf-8
